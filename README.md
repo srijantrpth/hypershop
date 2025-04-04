@@ -38,7 +38,7 @@ To get started with the AR Web App, follow these steps:
 
 
 ## Usage
-To run the AR Web App locally:**
+To run the AR Web App locally:
 
 1. Start the development server: sh
   npm start
