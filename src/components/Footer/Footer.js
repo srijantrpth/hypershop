@@ -9,7 +9,7 @@ function Footer() {
         
 
         <div className="contact-content">
-          <Link to="/"> 24bai70081 - Srijan Tripathi </Link>
+          <Link to="/"> 24BAI70081 - Srijan Tripathi </Link>
           <Link to="/"> 24BAI70427 - Aryan Saini </Link>
           <Link to="/"> 24BAI70356 - Abhinav Kumar Prasad </Link>
           <Link to="/"> 24BAI70204 - Nitin Sharma </Link>
