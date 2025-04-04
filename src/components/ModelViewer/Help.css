@@ -1,0 +1,110 @@
+.help-component {
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.help-content {
+  padding: 2rem;
+}
+
+.help-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.help-section {
+  margin-bottom: 2rem;
+}
+
+.help-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.help-instruction {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.help-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 50%;
+}
+
+.help-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-color);
+}
+
+.help-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.help-text strong {
+  font-weight: 600;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .help-component {
+    width: 95%;
+    max-height: 75vh;
+  }
+  
+  .help-content {
+    padding: 1.5rem;
+  }
+  
+  .help-title {
+    font-size: 1.3rem;
+  }
+  
+  .help-instruction {
+    gap: 0.7rem;
+  }
+  
+  .help-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+  
+  .help-text {
+    font-size: 0.85rem;
+  }
+}

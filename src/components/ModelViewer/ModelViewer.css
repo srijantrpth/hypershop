@@ -1,0 +1,125 @@
+.model-view {
+  position: relative;
+  width: 450px;
+  height: 500px;
+  margin: 1rem;
+  border-radius: 15px;
+  background: var(--card-bg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.model-view:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.model-viewer-container {
+  height: 75%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-details {
+  padding: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pname {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.3rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.category-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(74, 144, 226, 0.1);
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.color-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(80, 200, 120, 0.1);
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.rating-sec {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.star {
+  color: #ffb52e;
+}
+
+.add-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.add-icon:hover {
+  transform: scale(1.1);
+  background: var(--accent-color);
+}
+
+@media (max-width: 480px) {
+  .model-view {
+    width: 90%;
+    height: auto;
+  }
+  
+  .model-viewer-container {
+    height: 300px;
+  }
+}
