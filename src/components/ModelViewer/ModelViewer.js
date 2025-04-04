@@ -15,7 +15,7 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
     backgroundColor: "transparent",
     width: "100%",
     height: "100%",
-    borderRadius: "15px 15px 0 0",
+    borderRadius: "18px 18px 0 0",
   };
   
   // Accessing product for full screen
@@ -91,13 +91,22 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
     }
   };
 
-  // Calculate rating display
+  // Calculate rating display with filled and empty stars
   const renderStars = (rating = 3) => {
     return Array(5).fill(0).map((_, index) => (
-      <span key={index} className={index < rating ? "star" : ""}>
-        &#9733;
+      <span key={index} className={index < rating ? "star" : "star"} style={{ color: index < rating ? '#ffb52e' : '#d1d1d1' }}>
+        ★
       </span>
     ));
+  };
+
+  // Format price with commas for thousands
+  const formatPrice = (price = 1000) => {
+    return new Intl.NumberFormat('en-IN', { 
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0
+    }).format(price);
   };
 
   return (
@@ -184,9 +193,9 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
             
             <div className="product-meta">
               <div className="rating-sec">
-                {renderStars()}
+                {renderStars(4)} {/* Updated rating to 4 stars */}
               </div>
-              <div className="price">₹1000</div>
+              <div className="price">{formatPrice(item.price || 1000)}</div>
             </div>
             
             {!ARSupported && (
@@ -200,7 +209,7 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
                   level="H"
                   includeMargin={false}
                 />
-                <span className="qr-text">Scan for AR</span>
+                <span className="qr-text">Scan QR code to view this product in AR on your mobile device</span>
               </div>
             )}
           </div>
