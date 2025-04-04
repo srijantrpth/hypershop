@@ -1,0 +1,126 @@
+.search-page {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.search-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search-title h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.search-title p {
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.search-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  gap: 1.5rem;
+}
+
+.search-loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(74, 144, 226, 0.2);
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.search-loading p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  min-height: 40vh;
+}
+
+.no-results-content {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.no-results-content svg {
+  color: var(--primary-color);
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.no-results-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.no-results-content p {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.suggestions {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0 !important;
+}
+
+.no-results-content ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.no-results-content li {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .search-title h1 {
+    font-size: 1.5rem;
+  }
+  
+  .no-results-content {
+    padding: 1.5rem;
+  }
+}

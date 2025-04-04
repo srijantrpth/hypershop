@@ -7,6 +7,7 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import WishList from "./components/Wishlist/WishList";
+import Search from "./components/Search/Search";
 import { ThemeProvider } from "./context/ThemeContext";
 
 const App = () => {
@@ -64,6 +65,16 @@ const App = () => {
                 element={
                   <WishList wishlist={wishlist} onRemoveItem={handleRemoveItem} />
                 }
+              />
+              <Route 
+                path="/search" 
+                element={
+                  <Search 
+                    addToWishlist={addToWishlist} 
+                    removeFromWishlist={handleRemoveItem} 
+                    wishlist={wishlist} 
+                  />
+                } 
               />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
