@@ -11,8 +11,7 @@ import outdoorChairs from "../assets/models/Outdoor-Chairs.glb";
 import outdoorChairsUsdz from "../assets/models/Outdoor-Chairs.usdz";
 
 // Import Earth model
-import Earth from "../assets/models/Earth.glb";
-import EarthUsdz from "../assets/models/Earth.usdz";
+
 
 const productItems = [
   {
@@ -114,34 +113,7 @@ const productItems = [
       },
     ]
   },
-  // Add Earth model
-  {
-    id: 6,
-    name: "Earth Globe",
-    modelSrc: Earth,
-    iOSSrc: EarthUsdz,
-    category: "Education",
-    color: "Blue",
-    price: 5000,
-    annotations: [
-      {
-        title: "continents",
-        slot: "hotspot-1",
-        position: "0m 0m 0.5m",
-        normal: "0m 0m 1m",
-        orbit: "0deg 90deg 2m",
-        target: "0m 0m 0m"
-      },
-      {
-        title: "oceans",
-        slot: "hotspot-2",
-        position: "-0.4m 0m -0.3m",
-        normal: "-0.8m 0m -0.6m",
-        orbit: "0deg 180deg 2m",
-        target: "0m 0m 0m"
-      }
-    ]
-  }
+  
 ];
 
 export default productItems;
